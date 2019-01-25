@@ -7,9 +7,13 @@ class Anagram
     @word_arr = word.split('')
   end
   def match(test_array)
-    test_array.collect do |test_word|
+    matches = []
+    test_array.each do |test_word|
       test_word_array = test_word.split('')
-      test_word_array.sort == @word_arr.sort
+      if test_word_array.sort == @word_arr.sort
+        matches << test_word
+      end
     end
+    matches
   end
 end
