@@ -3,22 +3,17 @@ require 'pry'
 
 class Anagram 
   
-  attr_accessor :word
+  attr_accessor :name
   
   def initialize(word)
-    @word = word
-  end  
-  
-  def self.match(anagram)
-    matches = []
-    anagram.split("").sort.join == %w(@word).split("").sort.join
-      matches << 
-    else
-      []
-    end  
-  end    
-end    
+    @name = word
+  end 
 
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
+end 
 
 
 
