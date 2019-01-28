@@ -11,7 +11,7 @@ class Anagram
   
   def self.match(anagram)
     matches = []
-    anagram.split("").sort.join == %w(word).split("").sort.join
+    anagram.split("").sort.join == %w(@word).split("").sort.join
       matches << 
     else
       []
